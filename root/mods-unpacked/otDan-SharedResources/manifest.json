@@ -3,7 +3,7 @@
   "namespace": "otDan",
   "version_number": "1.0.0",
   "description": "This are just shared resources across my mods, it is not fully a mod since each of my mods contains a version of it, currently it will just be ignored. \nWith a later on version of the mod loader it might be able to just load the latest version by itself",
-  "website_url": "",
+  "website_url": "https://github.com/otDan/Brotato-SharedResources",
   "dependencies": [],
   "extra": {
     "godot": {
