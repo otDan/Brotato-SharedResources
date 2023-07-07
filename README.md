@@ -1,37 +1,10 @@
-<img align="right" src="https://github.com/otDan/Brotato-Template/blob/master/.publish/icon-full.png?raw=true" height="160" hspace="20"/>
+<img align="right" src="https://github.com/otDan/Brotato-SharedResources/blob/master/.publish/icon-full.png?raw=true" height="160" hspace="20"/>
 
-# Template for [Brotato](https://store.steampowered.com/app/1942280/Brotato/)
+# SharedResources for [Brotato](https://store.steampowered.com/app/1942280/Brotato/)
 
-Adds a menu to show and manage weapons
+This are just shared resources across my mods, it is not fully a mod since each of my mods contains a version of it, currently it will just be ignored. With a later on version of the mod loader it might be able to just load the latest version by itself
 - Built for the [GodotModLoader](https://github.com/GodotModding/godot-mod-loader)
 
-## Showcase
-<p align="center"> 
-    <img src="https://github.com/otDan/Brotato-Template/blob/master/.publish/showcase.png?raw=true" height="350" style="object-fit:scale-down;"/>
-</p>
-
-## Installation
-
-<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2974580070">
-    <img align="right" src="https://badgen.net/https/ostaszewski29.npkn.net/py-steam-subscribers-request/2974580070?icon=https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" hspace="50"/>
-</a>
-
-- Steam Workshop: 
-  - https://steamcommunity.com/sharedfiles/filedetails/?id=2941387735
-
-<a href="https://thunderstore.io/c/brotato/p/otDan/Template/">
-    <img align="right" src="https://badgen.net/https/git-hub-badge-data.npkn.net/thunderstore-downloads-request/brotato/Template?icon=https://gcdn.thunderstore.io/static/ts/thunderstore-logomark-black.svg" hspace="50"/>
-</a>
-
-- Thunderstore: 
-  - https://thunderstore.io/c/brotato/p/otDan/Template/
-
-<a href="https://github.com/otDan/Brotato-Template/releases">
-    <img align="right" src="https://badgen.net/github/assets-dl/otDan/Brotato-Template?icon=git&color=blue" hspace="50"/>
-</a> 
-
-- Manual: 
-  - https://github.com/otDan/Brotato-Template/releases
 
 <p align="left"> 
     <a href="https://www.paypal.com/paypalme/otdan">
