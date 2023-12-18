@@ -1,6 +1,6 @@
 extends MyMenuButtonParent
 
-signal mod_toggled(mod, state)
+signal value_toggled(mod, state)
 
 onready var label = $MarginContainer/HBoxContainer/ScrollContainer/Label
 onready var amount = $MarginContainer/HBoxContainer/Amount
@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func set_info(mod: String, item_amount: int):
 	label.text = mod
-	amount.text = "(%s)" % str(item_amount)
+	amount.text = "[%s]" % str(item_amount)
 
 
 func on_focus_entered():
@@ -24,11 +24,11 @@ func on_focus_entered():
 	amount.add_color_override("font_color", Color.black)
 
 
-func _on_ModToggle_toggled(button_pressed):
-	emit_signal("mod_toggled", label.text, button_pressed)
+func _on_ValueToggle_toggled(button_pressed):
+	emit_signal("value_toggled", label.text, button_pressed)
 
 
-func _on_ModToggle_focus_exited():
+func _on_ValueToggle_focus_exited():
 	label.scrolling = false
 	label.add_color_override("font_color", Color.white)
 	amount.add_color_override("font_color", Color.white)

@@ -1,15 +1,15 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://resources/fonts/actual/base/font_small_button.tres" type="DynamicFont" id=1]
-[ext_resource path="res://mods-unpacked/otDan-SharedResources/ui/menus/parts/mod_toggle.gd" type="Script" id=2]
-[ext_resource path="res://mods-unpacked/otDan-SharedResources/ui/menus/parts/scroll_text.gd" type="Script" id=3]
-[ext_resource path="res://resources/fonts/actual/base/font_small_text.tres" type="DynamicFont" id=4]
-[ext_resource path="res://mods-unpacked/otDan-SharedResources/ui/menus/parts/clip_container.gd" type="Script" id=6]
-[ext_resource path="res://resources/fonts/raw/NotoSansKR-Medium.otf" type="DynamicFontData" id=7]
-[ext_resource path="res://resources/fonts/raw/NotoSansSC-Medium.otf" type="DynamicFontData" id=8]
-[ext_resource path="res://resources/fonts/raw/NotoSansTC-Medium.otf" type="DynamicFontData" id=9]
-[ext_resource path="res://resources/fonts/raw/Anybody-Medium.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://resources/fonts/raw/NotoSansJP-Medium.otf" type="DynamicFontData" id=11]
+[ext_resource path="res://resources/fonts/actual/base/font_small_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://resources/fonts/raw/NotoSansJP-Medium.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://resources/fonts/raw/NotoSansTC-Medium.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://mods-unpacked/otDan-SharedResources/ui/menus/parts/clip_container.gd" type="Script" id=5]
+[ext_resource path="res://mods-unpacked/otDan-SharedResources/ui/menus/parts/scroll_text.gd" type="Script" id=6]
+[ext_resource path="res://mods-unpacked/otDan-SharedResources/ui/menus/parts/value_toggle.gd" type="Script" id=7]
+[ext_resource path="res://resources/fonts/raw/Anybody-Medium.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://resources/fonts/raw/NotoSansSC-Medium.otf" type="DynamicFontData" id=9]
+[ext_resource path="res://resources/fonts/raw/NotoSansKR-Medium.otf" type="DynamicFontData" id=10]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -29,13 +29,13 @@ HScrollBar/styles/scroll_focus = null
 [sub_resource type="StyleBoxEmpty" id=7]
 
 [sub_resource type="DynamicFont" id=6]
-font_data = ExtResource( 10 )
-fallback/0 = ExtResource( 11 )
-fallback/1 = ExtResource( 7 )
-fallback/2 = ExtResource( 8 )
-fallback/3 = ExtResource( 9 )
+font_data = ExtResource( 8 )
+fallback/0 = ExtResource( 3 )
+fallback/1 = ExtResource( 10 )
+fallback/2 = ExtResource( 9 )
+fallback/3 = ExtResource( 4 )
 
-[node name="ModToggle" type="CheckBox"]
+[node name="ValueToggle" type="CheckBox"]
 unique_name_in_owner = true
 margin_right = 260.0
 margin_bottom = 55.0
@@ -43,7 +43,7 @@ custom_constants/hseparation = 28
 custom_fonts/font = ExtResource( 1 )
 pressed = true
 clip_text = true
-script = ExtResource( 2 )
+script = ExtResource( 7 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
@@ -52,7 +52,7 @@ margin_left = 46.0
 margin_right = -15.0
 rect_clip_content = true
 mouse_filter = 2
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 margin_right = 199.0
@@ -60,7 +60,7 @@ margin_bottom = 55.0
 custom_constants/separation = 8
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer"]
-margin_right = 166.0
+margin_right = 147.0
 margin_bottom = 55.0
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -70,24 +70,24 @@ scroll_vertical_enabled = false
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/ScrollContainer"]
 margin_top = 15.0
-margin_right = 166.0
+margin_right = 147.0
 margin_bottom = 39.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
-custom_fonts/font = ExtResource( 4 )
-text = "MOD_NAME"
+custom_fonts/font = ExtResource( 2 )
+text = "VALUE_NAME"
 valign = 1
-script = ExtResource( 3 )
+script = ExtResource( 6 )
 
 [node name="Amount" type="Label" parent="MarginContainer/HBoxContainer"]
-margin_left = 174.0
+margin_left = 155.0
 margin_top = 19.0
 margin_right = 199.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 6 )
-text = "(-1)"
+text = "[-330]"
 align = 2
 valign = 1
 
-[connection signal="focus_exited" from="." to="." method="_on_ModToggle_focus_exited"]
-[connection signal="toggled" from="." to="." method="_on_ModToggle_toggled"]
+[connection signal="focus_exited" from="." to="." method="_on_ValueToggle_focus_exited"]
+[connection signal="toggled" from="." to="." method="_on_ValueToggle_toggled"]
